@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+wheelhouse/
+packages/
+dist/
+build/
+*.egg-info/
+my_widgets/*/
+!my_widgets/__init__.py

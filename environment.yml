@@ -1,0 +1,20 @@
+# conda / mamba alternative:
+#   conda env create -f environment.yml
+#   conda activate widgets-workshop
+#   jupyter lab
+name: widgets-workshop
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - jupyterlab>=4.2
+  - ipykernel
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - geopandas
+  - pyarrow
+  - pip:
+      - -r requirements.txt

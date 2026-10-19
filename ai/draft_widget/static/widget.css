@@ -1,0 +1,5 @@
+.rld-toolbar { display: flex; gap: 4px; margin-bottom: 4px; }
+.rld-active { font-weight: bold; }
+.rld-canvas { border: 1px solid #ccc; }
+.rld-list { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+.rld-chip { border: 1px solid #ccc; border-radius: 10px; padding: 0 8px; }

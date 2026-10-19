@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "{{dist_name}}"
+version = "0.1.0"
+description = "{{description}}"
+readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "{{author}}" }]
+keywords = ["jupyter", "widgets", "anywidget"]
+classifiers = [
+  "Framework :: Jupyter",
+  "Framework :: Jupyter :: JupyterLab",
+  "Programming Language :: Python :: 3",
+]
+dependencies = [
+  "anywidget>=0.11",  # the AFM uses `signal`, added in 0.11
+  # Add what your widget imports, for example "numpy" or "pandas".
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "watchfiles", "jupyterlab"]
+
+[project.urls]
+Homepage = "https://github.com/YOUR-USER/{{dist_name}}"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/{{module_name}}"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [".github"]

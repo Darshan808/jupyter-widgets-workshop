@@ -1,0 +1,103 @@
+/* JupyterLab theme variables, with fallbacks for other hosts. Prefix: "rl-". */
+.rl-root {
+  --rl-fg: var(--jp-ui-font-color1, #1f1f1f);
+  --rl-muted: var(--jp-ui-font-color2, #616161);
+  --rl-border: var(--jp-border-color2, #dcdcdc);
+  --rl-surface: var(--jp-layout-color1, #ffffff);
+  --rl-surface-2: var(--jp-layout-color2, #f2f2f2);
+  --rl-accent: var(--jp-brand-color1, #1976d2);
+  font-family: var(--jp-ui-font-family, system-ui, sans-serif);
+  font-size: var(--jp-ui-font-size1, 13px);
+  color: var(--rl-fg);
+}
+
+.rl-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.rl-labels { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.rl-btn,
+.rl-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: inherit;
+  color: inherit;
+  padding: 3px 10px;
+  border: 1px solid var(--rl-border);
+  border-radius: 4px;
+  background: var(--rl-surface-2);
+  cursor: pointer;
+}
+.rl-btn:hover,
+.rl-label:hover { border-color: var(--rl-accent); }
+.rl-label[aria-pressed="true"] {
+  border-color: var(--rl-accent);
+  box-shadow: inset 0 -2px 0 var(--rl-accent);
+}
+.rl-btn:focus-visible,
+.rl-label:focus-visible,
+.rl-remove:focus-visible {
+  outline: 2px solid var(--rl-accent);
+  outline-offset: 1px;
+}
+
+.rl-status {
+  margin-left: auto;
+  color: var(--rl-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.rl-stage {
+  overflow: hidden;
+  border: 1px solid var(--rl-border);
+  border-radius: 6px;
+  background: var(--rl-surface);
+}
+
+.rl-canvas {
+  display: block;
+  touch-action: none;
+  cursor: col-resize;
+}
+
+.rl-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.rl-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 1px 2px 1px 8px;
+  border: 1px solid var(--rl-border);
+  border-radius: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rl-swatch {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-radius: 2px;
+}
+
+.rl-remove {
+  font: inherit;
+  color: var(--rl-muted);
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+}
+.rl-remove:hover { background: var(--rl-surface-2); color: var(--rl-fg); }

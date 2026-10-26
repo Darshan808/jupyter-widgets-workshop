@@ -39,17 +39,6 @@ jupyter lab
 Open **`00_setup_check.ipynb`** and run all cells. You should see a slider and
 a green line of text. If not, see [`resources/troubleshooting.md`](resources/troubleshooting.md).
 
-**Important:** start JupyterLab from the same environment you installed into.
-Most "widget shows as text" problems come from two different environments.
-
-### No time, or the installation failed?
-
-On the day, mentors have **USB drives with an offline wheelhouse**:
-
-```bash
-python -m pip install --no-index --find-links <usb>/wheelhouse/<your-system> -r requirements.txt
-```
-
 ## Schedule (3 hours)
 
 | Time | Notebook | Topic |
